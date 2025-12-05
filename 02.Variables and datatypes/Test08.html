@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Variables&Datatypes of Javascript</title>
+    <script>
+        function main(){
+           let largeInt=989744996164466n;
+           console.log(largeInt, typeof largeInt);
+           largeInt=BigInt(10);
+           console.log(largeInt, typeof largeInt);
+        }
+        main();
+    </script>
+</head>
+<body>
+    <h1>Variables and Datatypes in Javascript</h1>
+</body>
+</html>
+
+<!-- 
+*BigInt datatype was introduced in ES11 version.
+*BigInt type is used to store large numbers which cannot be fit as a number type.
+*There are 2 ways to represent the number as bigint
+1)represent the value with lower case 'n'
+2)use bigint function
+-->
