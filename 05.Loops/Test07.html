@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function main(){
+            let n=2;
+            if(n<2){
+                console.log(`${n}is not a prime`);
+                return;
+            }
+            for(let i=2;i<=Math.trunc(n/2);i++){
+                if(n%i==0){
+                    console.log(`${n}is not a prime`);
+                    return;
+                }
+            }
+            console.log(`${n} is a prime`);
+        }
+        main();
+    </script>
+</head>
+<body>
+    <h1>Loops</h1>
+</body>
+</html>
