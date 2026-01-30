@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<script>
+    // ! conditional stmts 
+
+let bill = 39999
+if(bill>=500 && bill<=5000){
+    let dis = 2/100*bill
+    document.writeln(`Dear customer your payabale amount is ${bill-dis}`);
+}
+else if(bill>5001 && bill<=10000){
+    let dis = 5/100*bill
+    document.writeln(`Dear customer your payabale amount is ${bill-dis}`); 
+}
+else if(bill>10001 && bill<=20000){
+    let dis = 10/100*bill
+    document.writeln(`Dear customer your payabale amount is ${bill-dis}`);
+}
+else if(bill>20001){
+    let dis = 15/100*bill
+    document.writeln(`Dear customer your payabale amount is ${bill-dis}`);
+}
+else{
+    document.writeln(`Discount not applied`);
+}
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
