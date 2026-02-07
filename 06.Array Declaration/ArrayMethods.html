@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Array Methods</h1>
+    <script>
+        // ! Array methods
+let flipkart = ["books",'laptop','mobile','table','bag','pen']
+console.log(flipkart);
+
+// // ! push(val1,valu2,....) : to add multiple array elements at the end of the array
+// flipkart.push('cloths','shirt','ring')
+// console.log(flipkart);
+
+// // ! unshift(val1,valu2,....) : to add multiple array elements from the begining of the array
+// flipkart.unshift('pencil','perfume','earbuds','earphone')
+// console.log(flipkart);
+
+// // ! pop() : to delete the last element
+// flipkart.pop()
+// console.log(flipkart);
+
+// // ! shift() : to delete the first element
+// flipkart.shift()
+// console.log(flipkart);
+
+// ! splice(start_index,delete_count,replacemenet_elements) : to add and delete the array element at the middle of the array
+//  ['perfume', 'earbuds', 'earphone', 'books', 'laptop', 'mobile', 'table', 'bag', 'pen', 'cloths', 'shirt']
+// ! add and delete
+// flipkart.splice(1,3,'headphones','chair')
+// ! delete
+// flipkart.splice(3,2)
+// ! add
+// flipkart.splice(2,0,'food','charger')
+// console.log(flipkart);
+
+// ! slice(start_index,end_index) : to extract the part of the array
+// let slicedArr = flipkart.slice(2,6)
+// let slicedArr = flipkart.slice(6)
+// console.log(slicedArr);
+
+// ! indexOf(element) : returns index position of the specified element
+console.log(flipkart.indexOf('books'));
+console.log(flipkart.indexOf('pencil'));
+
+// ! at(index) : returns element of the specified index
+console.log(flipkart.at(3));
+console.log(flipkart.at(10));
+
+// ! includes(element) : 
+console.log(flipkart.includes('pen'));
+console.log(flipkart.includes('pencil'));
+
+// ! concat() : to merge multiple arrays
+let amazon = ['earbuds','headphone',"mobile"]
+console.log(flipkart.concat(amazon));
+
+// ! join() : It is used to join all elements of an array into a string.
+console.log(flipkart.join());
+console.log(flipkart.join("--"));
+console.log(flipkart.join(" "));
+console.log(flipkart.join(""));
+
+// ! toString() : very similar to join
+console.log(flipkart.toString());
+console.log(flipkart.toString("--"));
+console.log(flipkart.toString(" "));
+console.log(flipkart.toString(""));
+
+// ! reverse() : returns reversed array
+console.log(flipkart.reverse());
+
+// ! split() : to convert string into array
+let str = 'Hello good morning'
+// let arr = str.split()
+// let arr = str.split(" ")
+let arr = str.split('o')
+
+console.log(arr);
+
+// ! array.from()
+console.log(Array.from("hello good morning")); 
+    </script>
+</body>
+</html>
