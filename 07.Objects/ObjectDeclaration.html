@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Creation</title>
+    <script>
+// ! Object :  It is an entity having state and behaviour and it is used to stor ethe data in the form of key value pair
+//There are 3 ways to create objects.  
+//1.By object literal.
+let emp={
+id:102,
+name:"Kumar",  
+salary:40000
+}
+console.log(emp);
+//Object Notation and Bracket Notation
 
+//1.Access using dot notation-- objectname.keyname
+console.log(emp.id);
+//1.Access using bracket notation-- objectname["keyname"]
+console.log(emp["name"]);
+
+//2.Update using dot notation-- objectname.keyname=newval
+console.log(emp.name="nithin");
+//2.Update using bracket notation-- objectname["keyname"]=newval
+console.log(emp['id']=1000);
+
+//3.Delete using dot notation-- delete objectname.keyname
+// delete emp.id
+//3.Delete using bracket notation-- objectname["keyname"]
+// delete emp.name
+// console.log(emp);
+
+
+//2.By creating instance of Object directly (using new keyword). 
+let car = new Object()
+car.brand = "BMW"
+car.color = 'white'
+car.engine = 'petrol'
+console.log(car);
+
+
+//3.By using constructor function
+function student(sname, sid, address){
+    this.sname = sname
+    this.sid = sid
+    this.address = address
+}
+let std1 = new student('manu',111,'bng')
+console.log(std1);
+
+let std2 = new student('anu',122,'hyd')
+console.log(std2);
+
+    </script>
+</head>
+<body> 
+    <h1>Objects</h1>
+</body>
+</html>
