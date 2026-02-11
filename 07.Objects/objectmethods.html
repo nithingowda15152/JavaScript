@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Methods</title>
+    <script>
+    let person = {
+    pname : 'tarun',
+    age : 28,
+    address : 'pune'
+    }
+    //! freeze() :  to freeze the obj - cannot add,delete and update
+    // Object.freeze(person)
+
+    // ! isFrozen() : It is used to check whether the particular object is frozen or not
+     console.log(Object.isFrozen(person));
+    
+     // // ? add
+    person.contact = 6780879797
+
+    // // ? delete
+    delete person.pname
+
+    // // ? update
+    person.age = 30
+
+    // ? access
+    console.log(person.pname);
+    console.log(person); 
+
+
+    // // ! seal(): to seal the object : cannot add and delete also cannot update
+    // Object.seal(person)
+
+    // ! isSeadled() : 
+    console.log(Object.isSealed(person));
+
+    // // ? add
+    person.contact = 6780879797
+
+    // // ? delete
+    delete person.pname
+
+    // // ? update
+    person.age = 30
+
+    // ? access
+    console.log(person.pname);
+
+    console.log(person);
+
+    // ! keys() : returns array of keys
+    console.log(Object.keys(person))
+
+     // ! values() : returns array of values
+    console.log(Object.values(person));
+
+     // ! entries() :  nested array -- kay value pair
+    console.log(Object.entries(person));
+
+    // ! hasOwn(objectname,keyname) : to check whether the specified key is present in the object or not
+    console.log(Object.hasOwn(person,'pname'));
+    console.log(Object.hasOwn(person,'address'));
+    console.log(Object.hasOwn(person,'contact'));
+
+
+    // ! assign(targetObj,obj1,obj2,...) : merge multiple objects
+    let comp = {
+    role : 'Full-stack developer',
+    salary : 30000,
+    dept : "IT"
+}
+
+    Object.assign(person,comp);
+    console.log(person);
+
+
+    let newObj = Object.assign({},person,comp)
+    console.log(newObj);
+    console.log(person);
+    console.log(comp);
+
+    let emp = {
+    ename : 'Sam',
+    eid : 123,
+    salary : 45678.89,
+    role : 'dev',
+    isDev : true,
+    skills : ['html','css','js','java','sql','react'],
+    address : {
+        city : 'pune',
+        state : 'mah'
+    },
+    greet : function(){
+        console.log(`Hello I am ${this.ename}`);
+    }
+    }
+
+    console.log(emp.ename);
+    console.log(emp.role);
+    console.log(emp.skills[2]);
+    console.log(emp.address.city);
+    console.log(emp['address']['state']);
+    emp.greet()
+
+
+
+
+    //! call(), apply() and bind() : to execute a prticular functon for multiple objects.
+    let fullname = function(salary, address){
+    console.log(`Hello I am ${this.fname} ${this.lname}, I am working in ${address} and earning around ${salary}`);
+    }
+    let emp1 = {
+    fname : 'Raman',
+    lname : 'H'
+    }
+    let emp2 = {
+    fname : 'Mahesh',
+    lname : 'M'
+    }
+    let emp3 = {
+    fname : 'Ram',
+    lname : 'P'
+    }
+    // ! call(objectname,function_args) : to call a particular function for muliple objects.
+    fullname.call(emp2,35000,'bng')
+    fullname.call(emp3,80000,'delhi')
+    fullname.call(emp1,20000,'hyd')
+
+
+    // ! apply(objectname,[function args]) : very similar to call -- here function args shd be passed in the form of array
+    fullname.apply(emp1,[34000,'hyd'])
+    fullname.apply(emp2,[40000,'pune'])
+
+    // ! bind(objectname,function_args) : returns the new function
+    let res1 = fullname.bind(emp1,50000,'delhi')
+    res1()
+    let res2 = fullname.bind(emp2,60000,'kochi')
+    res2()
+    </script>
+</head>
+<body> 
+    <h1>Object Method</h1>
+</body>
+</html>
