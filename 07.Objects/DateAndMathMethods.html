@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Date And Math Methods</title>
+<script>
+    let d = new Date()
+    console.log(d);
+
+    console.log(d.getFullYear());
+console.log(d.getMonth());
+console.log(d.getDate());
+console.log(d.getDay());
+console.log(d.getTime());
+console.log(d.getHours());
+console.log(d.getMinutes());
+console.log(d.getSeconds());
+console.log(d.toLocaleTimeString());
+console.log(d.toLocaleDateString());
+
+// ! 15 aug 1947
+d.setFullYear(1947)
+d.setMonth(7)
+d.setDate(15)
+
+// ! 30 dec 2002
+d.setFullYear(2002)
+d.setMonth(11)
+d.setDate(30)
+
+console.log(d);
+
+// ! Math object
+
+// ! pow(base,exp)
+console.log(Math.pow(2,4));
+
+// ! sqrt(num)
+console.log(Math.sqrt(9));
+
+// ! cbrt(num)
+console.log(Math.cbrt(8));
+
+
+// ! round(num) : round up the num to nearest integer
+console.log(Math.round(9.3));
+console.log(Math.round(23.8));
+console.log(Math.round(3.5));
+console.log(Math.round(-3.6));
+
+// ! ceil(num) : round up the num to nearest highest integer
+console.log(Math.ceil(90.7));
+console.log(Math.ceil(9.2));
+console.log(Math.ceil(-4.3));
+
+// ! floor(num) : round up the num to nearest lowest integer
+console.log(Math.floor(2.9));
+console.log(Math.floor(45.2));
+console.log(Math.floor(-5.7));
+
+// ! trunc(num) : returns only integer part
+console.log(Math.trunc(4.6));
+console.log(Math.trunc(678.54));
+console.log(Math.trunc(-46.56));
+
+// ! max(num1,num2,num3,...) : maximum num
+console.log(Math.max(200,120,400,-589,100,-9000));
+
+// ! min(num1,num2,num3,...) : minimum num
+console.log(Math.min(200,120,400,-589,100,-9000));
+
+// ! random() : generate a random num from 0-1
+console.log(Math.random());
+
+
+</script>
+</head>
+<body>
+    <h1>Date And Math Methods</h1>
+</body>
+</html>
