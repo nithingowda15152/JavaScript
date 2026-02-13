@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>For-of ,For-in , for-each Loops</title>
+<script>
+    //forEach(callback) : HOF : by executing the callback function for each element of the array it will iterate over the array
+    //Works only for arrays.
+    let students = ['maheshwari','komal','siri','ullas','hari']
+    students.forEach((std,i)=>{
+    console.log(`Hello ${std}, Good Morning...`);
+    })
+
+    //for of : iterate over arrays
+    //Used to iterate over values
+    //Works for arrays, strings, maps, sets.
+    let nums = [1,2,3,4,5,6,7,8,9,10]
+    for(let n of nums){
+        console.log(n);
+    }
+
+    // // ! for in : iterate over keys of objects
+    let emp = {
+    ename : 'manu',
+    eid : 222,
+    age : 29
+    }
+
+    for(let k in emp){
+    console.log(k);//to print key
+    console.log(emp[k]);//to print values
+    }
+
+
+    //loooopp-iterator
+    function generateOtp(){
+    let str = '1234567890zxcvbnmlkjhgfdsaqwertyuiop'
+    let otp = ''
+
+    for(let i=1;i<=4;i++){
+        otp += str[Math.floor(Math.random()*str.length)];    //2693
+    }
+
+    alert(`The OTP is valid for 30 sec ${otp}`);
+    }
+
+    generateOtp() 
+
+
+</script>
+</head>
+<body>
+    <h1>For ,For-in , for-each Loops</h1>
+</body>
+</html>
