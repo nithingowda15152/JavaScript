@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String</title>
+    <script>
+    //string methods
 
+    let str='hello good morning';
+
+    //length
+    console.log(str.length);
+
+    //slice():Used to extract the part of the string by passing start index or end index
+    //SYNTAX-> slice(start-index,end-index)
+    //-ve value is accepted
+    console.log(str.slice(2,5));
+    console.log(str.slice(-3));
+
+    //! substring(start_index,end_index) : willnot accept negative values
+console.log(str.substring(2,5));
+console.log(str.substring(2,9));
+console.log(str.substring(9));
+console.log(str.substring(-3));
+
+// ! substr(start_index,len_of_res_str)
+console.log(str.substr(3,6));
+console.log(str.substr(1,10));
+
+// ! replace(old_str,new_str)
+console.log(str.replace('morning','evening'));
+console.log(str.replace('o','🏵️'));
+
+// ! replaceAll(old_str,new_str)
+console.log(str.replaceAll('o','🏵️'));
+
+// ! trim() : to remove the start and end spaces
+// trimStart(), trimEnd()
+let text = "  have a good day   "
+console.log(text);
+console.log(text.trim());
+
+// ! indexof(char) : returns index position of the specified char
+console.log(str.indexOf('good'));
+console.log(str.indexOf('o'));
+
+// ! lastndexof(char) : returns index position of the specified char
+console.log(str.lastIndexOf('o'));
+
+// ! includes(str)
+console.log(str.includes('morning'));
+console.log(str.includes('n'));
+console.log(str.includes('N'));
+
+// ! repeat(num) : it will repeat original str
+console.log(str.repeat(4));
+
+// ! charAt(index) : returns char of specified index
+console.log(str.charAt(9));
+
+// ! charCodeAt(index) : returns ASCII value of char of specified index
+console.log(str.charCodeAt(9));
+
+// ! concat() :  merge multiple strings
+console.log(str.concat(text));
+
+// ! padStart(len_of_res_str,char) : XXXXXXXX90
+let a = '90'
+console.log(a.padStart(10,'X'));
+
+// ! padEnd()  : 4566XXXXXXXX
+let s = '4566'
+console.log(s.padEnd(12,'X'));
+    </script>
+</head>
+<body> 
+    <h1>String and String Methods</h1>
+</body>
+</html>
