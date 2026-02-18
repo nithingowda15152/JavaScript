@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <div id="gp">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+    <style>
+        #gp{
+            border: 2px solid red;
+            height: 400px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #parent{
+            border: 2px solid red;
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #child{
+            border: 2px solid red;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script src="./eventPropagation.js"></script>
+</body>
+</html> 
