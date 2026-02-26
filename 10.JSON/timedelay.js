@@ -35,7 +35,8 @@
 //     document.getElementById('demo').innerText=d.toLocaleTimeString()
 // },1000)
 
-// let stopbtn=document.querySelector('button')
-// stopbtn.addEventListener('click',()=>{
-//     clearInterval(mytime)
-// })
+ let stopbtn=document.querySelector('button')
+ stopbtn.addEventListener('click',()=>{
+     clearInterval(mytime)
+})
+
